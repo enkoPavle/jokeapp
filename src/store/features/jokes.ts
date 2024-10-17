@@ -32,7 +32,8 @@ export const jokesSlice = createSlice({
     buider.addMatcher(jokesApi.endpoints.getJokes.matchFulfilled, (state, {payload}) => {
       const joke = {
         ...payload,
-        isLiked: false
+        isLiked: false,
+        createdAt: Date.now()
       }
 
       if (state.today?.id !== joke.id) {

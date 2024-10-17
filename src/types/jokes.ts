@@ -31,4 +31,5 @@ export interface JokeResponse {
 
 export interface Joke extends JokeResponse {
   isLiked: boolean
+  createdAt: number
 }
