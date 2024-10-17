@@ -1,5 +1,6 @@
 import {useEffect} from "react"
 import {SafeAreaProvider} from "react-native-safe-area-context"
+import {useFonts} from "expo-font"
 import {Stack} from "expo-router"
 import * as SplashScreen from "expo-splash-screen"
 
@@ -11,12 +12,7 @@ import {PersistGate} from "redux-persist/integration/react"
 import "react-native-reanimated"
 
 import {theme} from "@/constants/colors"
-import {
-  Inter_500Medium,
-  Inter_600SemiBold,
-  Inter_700Bold,
-  useFonts
-} from "@expo-google-fonts/inter"
+import {Inter_500Medium, Inter_600SemiBold, Inter_700Bold} from "@expo-google-fonts/inter"
 import {ThemeProvider} from "@react-navigation/native"
 
 SplashScreen.preventAutoHideAsync()
