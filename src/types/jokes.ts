@@ -23,6 +23,7 @@ export interface JokeResponse {
   "type": string
   "setup": string
   "delivery": string
+  "joke": string
   "flags": JokeFlags
   "id": number
   "safe": boolean

@@ -11,13 +11,14 @@ interface Props extends Joke {
 }
 export const HistoryListItem: React.FC<Props> = ({
   id,
+  joke,
   setup,
   delivery,
   isLiked,
   onPress
 }) => (
   <View style={styles.container}>
-    <Text style={styles.text}>{`${setup} ${delivery}`}</Text>
+    <Text style={styles.text}>{joke ?? `${setup} ${delivery}`}</Text>
     <JokeLikeToggleButton id={id} isLiked={isLiked} onPress={onPress} />
   </View>
 )

@@ -24,9 +24,7 @@ export const TodayScreen = () => {
       )}
       {data ? (
         <>
-          <Text size="md">
-            {data ? `${data.setup} ${data.delivery}` : "Oops! Something went wrong."}
-          </Text>
+          <Text size="md">{data.joke ?? `${data.setup} ${data.delivery}`}</Text>
           <JokeLikeToggleButton
             id={data.id}
             isLiked={data.isLiked}

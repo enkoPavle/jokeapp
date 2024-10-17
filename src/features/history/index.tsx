@@ -4,9 +4,9 @@ import {StyleSheet, View} from "react-native"
 import {useActions} from "@/shared/hooks"
 import {useAppSelector} from "@/store"
 
-import {HistoryListEmpty} from "../components/history-list-empty"
-import {HistoryListItem} from "../components/history-list-item"
-import {HistoryListSeparator} from "../components/history-list-separator"
+import {HistoryListEmpty} from "./components/history-list-empty"
+import {HistoryListItem} from "./components/history-list-item"
+import {HistoryListSeparator} from "./components/history-list-separator"
 
 import {FlashList} from "@shopify/flash-list"
 

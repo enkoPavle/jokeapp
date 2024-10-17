@@ -22,7 +22,7 @@ export const useTodayJoke = () => {
 
   return {
     data: todayJoke,
-    isLoading,
-    isError
+    isLoading: isLoading && !todayJoke,
+    isError: isError && !todayJoke
   }
 }
