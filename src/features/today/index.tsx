@@ -1,3 +1,3 @@
-export const Today = () => {
+export const TodayScreen = () => {
   return null
 }

@@ -1,20 +1,25 @@
-import React from "react"
-import {StyleProp, ViewStyle} from "react-native"
+import {FC} from "react"
 
+import {colors} from "@/constants/colors"
 import * as SVGIcons from "@/constants/icons"
 
 import {SVGIconNames} from "@/types/icons"
 
-interface IProps {
+interface Props {
   name: SVGIconNames
-  style?: StyleProp<ViewStyle>
   width?: number
   height?: number
+  color?: string
 }
 
-export const SVGIcon: React.FC<IProps> = ({name, style, width = 24, height = 24}) => {
-  // eslint-disable-next-line import/namespace
+export const SVGIcon: FC<Props> = ({
+  name,
+  width = 20,
+  height = 20,
+  color = colors.black
+}) => {
+  /* eslint-disable import/namespace */
   const IconComponent = SVGIcons[name].default
 
-  return <IconComponent width={width} height={height} style={style} />
+  return <IconComponent width={width} height={height} stroke={color} />
 }

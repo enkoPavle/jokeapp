@@ -17,7 +17,7 @@ export const theme: Theme = {
     background: colors.white,
     card: colors.white,
     text: colors.black,
-    border: colors.purple,
+    border: colors.gray,
     notification: colors.purple
   }
 }
