@@ -2,11 +2,13 @@ import {StyleSheet, View} from "react-native"
 
 import {Text} from "@/shared/components"
 import {JokeLikeToggleButton} from "@/shared/components/joke-like-toggle-button"
+import {useActions} from "@/shared/hooks"
 
 import {useTodayJoke} from "./hooks/use-today-joke"
 
 export const TodayScreen = () => {
   const {data, isLoading, isError} = useTodayJoke()
+  const {toggleJokeLike} = useActions()
 
   return (
     <View style={styles.container}>
@@ -25,7 +27,11 @@ export const TodayScreen = () => {
           <Text size="md">
             {data ? `${data.setup} ${data.delivery}` : "Oops! Something went wrong."}
           </Text>
-          <JokeLikeToggleButton id={data.id} isLiked={data.isLiked} />
+          <JokeLikeToggleButton
+            id={data.id}
+            isLiked={data.isLiked}
+            onPress={toggleJokeLike}
+          />
         </>
       ) : null}
     </View>
