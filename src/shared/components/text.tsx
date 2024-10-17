@@ -1,5 +1,5 @@
 import {FC} from "react"
-import {StyleSheet, Text as BaseText, type TextProps} from "react-native"
+import {Platform, StyleSheet, Text as BaseText, type TextProps} from "react-native"
 
 import {colors} from "@/constants/colors"
 
@@ -33,22 +33,22 @@ export const Text: FC<Props> = ({style, size = "md", color, center, ...rest}) =>
 const styles = StyleSheet.create({
   xs: {
     fontSize: 12,
-    fontWeight: "600",
-    color: colors.black
+    color: colors.black,
+    fontFamily: "Inter_700Bold"
   },
   sm: {
     fontSize: 16,
-    fontWeight: "500",
-    color: colors.black
+    color: colors.black,
+    fontFamily: "Inter_500Medium"
   },
   md: {
     fontSize: 24,
-    fontWeight: "600",
-    color: colors.black
+    color: colors.black,
+    fontFamily: "Inter_600SemiBold"
   },
   lg: {
     fontSize: 36,
-    fontWeight: "700",
-    color: colors.black
+    color: colors.black,
+    fontFamily: "Inter_700Bold"
   }
 })
